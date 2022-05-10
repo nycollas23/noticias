@@ -1,0 +1,30 @@
+.container {
+  height: 500px;
+  overflow: auto;
+}
+
+.container-no-values {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  width: 100%;
+}
+
+.item {
+  margin: 10px 0;
+  position: relative;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.content {
+  font-size: 1em;
+}
+
+.autor {
+  font-weight: bold;
+}

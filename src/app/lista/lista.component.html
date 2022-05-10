@@ -1,0 +1,35 @@
+<div
+  *ngIf="noticias && noticias.totalResults > 0; else semNoticias"
+  class="container"
+>
+
+  <div
+    *ngFor="let not of noticias.articles"
+    class="row item"
+  >
+
+    <div class="col-md-5">
+      <img [src]="not.urlToImage" />
+    </div>
+
+    <div class="col-md-7">
+      <span class="title">{{not.title}}</span>
+      <p class="content">{{not.description}} - <span class="autor">{{not.source.name}}</span></p>
+      <button
+        class="btn btn-primary"
+        (click)="goToLink(not.url)"
+      >Ver Mais
+      </button>
+    </div>
+
+
+  </div>
+
+</div>
+
+<ng-template #semNoticias>
+  <div class="container-no-values">
+    Nenhuma noticia encontrada com esse filtro
+  </div>
+
+</ng-template>
